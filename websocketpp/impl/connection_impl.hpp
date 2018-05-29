@@ -1834,6 +1834,7 @@ void connection<config>::write_frame() {
     }
 
     // Print detailed send stats if those log levels are enabled
+	/*
     if (m_alog.static_test(log::alevel::frame_header)) {
     if (m_alog.dynamic_test(log::alevel::frame_header)) {
         std::stringstream general,header,payload;
@@ -1874,7 +1875,7 @@ void connection<config>::write_frame() {
         m_alog.write(log::alevel::frame_header,header.str());
         m_alog.write(log::alevel::frame_payload,payload.str());
     }
-    }
+    }*/
 
     transport_con_type::async_write(
         m_send_buffer,
